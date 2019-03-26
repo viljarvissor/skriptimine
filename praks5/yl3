@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#puhkuse saabumise arvutamine
+echo "Pyhapaev -0;
+Esmaspäev - 1;
+Teisipäev - 2;
+Kolmapäev - 3;
+Neljapäev - 4;
+Reede - 5;
+Laupäev - 6."
+
+#küsimuste vastamine ning vastuste salvestamine
+
+echo -n "Sisestage millal soidad ara: "
+read paev
+echo -n "Sisestage oopaevade arv: "
+read oopaev
+
+#arvutamine
+paevade=$(($oopaev % 7))
+vastus=(($paev + $paevad))
+
+#vastuse andmine
+
+echo "Tagasi oled päeval number" $vastus"."
+#
+#skripti lõpp
