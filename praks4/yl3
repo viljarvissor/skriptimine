@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#bussireisi ülesanne
+#
+##küsimsed
+
+echo "Mitu reisijat tahab kaasa tulla? #küsimus
+read reis #loeb vastuse
+echo "mitu kohta on bussis? #küsimus
+read bussik #loeb vastuse
+
+#arvutamine
+
+bussia=`expr $reis / $bussik` #arvutab bussi arvu
+echo "Tuleb tellida" $bussia "bussi." #ütleb mitu bussi tuleb tellida
+maha=`expr $bussia \* $bussik` #arvutab, kui palju mahub bussidesse
+maha1=`expr $reis - $maha` #arvutab kui palju jääb maha
+sleep 1 #ootab 1sec
+echo "AGA!"
+sleep 1
+echo "Maha jääb" $maha1 "reisijat" #ütleb palju maha jääb
+#
+#skripti lõpp
