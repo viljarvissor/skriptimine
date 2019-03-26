@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#esmamuljed
+#
+echo "Viljar Vissor" #väljastab nime uuele reale
+echo "ISP118" #väljastab õppegrupi uuele reale
+echo "See aine on väga kaasahaarav ja tore" #väljastab kirjelduse uuele reale
+echo "Hetkeline mulje on positiivne, enda arenemine on tohutu, kõigest on lihtne aru saada" #väljastab kirjelduse uuele reale
+#
+#skripti lõpp
