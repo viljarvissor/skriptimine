@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+#Tervitus
+#
+echo -n "Sisestage enda ees- ja perenimi:" #reavahetuseta ja annab küsimuse
+read eesnimi perenimi #loeb vastuseid ja jätab meelde
+echo "Tere tulemast, $eesnimi $perenimi " #tervitab sind sinu nimega
+#
+#skripti lõpp
