@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+#küpsisetort
+
+##küsimused
+
+echo "sisestage aluskandiku pikkus(cm): " #küsimus
+read aluspikkus #loeb vastust
+echo "sisesta aluskandiku laius(cm): " #küsib
+read aluslaius #loeb vastust
+echo "Sisestage küpsise pikkus(cm): " #küsimus
+read kypspikkus #loeb vastust
+echo "sisestage küpsise laius(cm): " #küsib
+read kypslaius #loeb vastust
+echo "sisestage kihtide arv: " #küsib
+read kihid #loeb vastust
+echo "Mitu küpsist on ühes pakis: " #küsib
+read pakis #loeb vastust
+
+##Arvutamine
+
+laiusarv=$(expr $aluslaius / $kypslaius) #arvutab laiuses olevate küpsiste arvu
+echo "Laiusena läheb $laiusarv "küpsist" #ytleb, et kui mitu tükki läheb  (käsureal)
+sleep 2 #ootab 2 sev et minna edasi järgmise käsuga
+pikkusarv=$(expr $aluspikkus / $kypspikkus) #ytleb, et kui mitu küpsist läheb laiusesse.
+sleep 2 #ootab 2 sec et minna edasi järgmise käsuga
+aluskord=$(expr $pikkusarv \* $laiusarv) #arvutab aluses olevad küpsised
+echo "Alusena läheb kokku" $aluskord "küpsist" #ütleb kui mitu küpsist läheb alusesse
+sleep 2 #ootab 2 sevc et minna edasi
+kihidko=$(expr $aluskord \* $kihid) #arvutab koos kihtidesse minevate küpsistega
+echo "kokku tuleb" $kihidko "küpsist koogile" #ütleb, et kui palju läheb küpsiseid kokku
+sleep 2
+pakiarv=$(expr $kihidko / $pakis) #arvutab, et kui mitu pakki küpsiseid on vaja
+echo "Kokku tuleb osta" $pakiarv "pakki küpsist" #ütleb mitu küpsisepakki on vaja osta
+#
+#skripti lõpp
+
