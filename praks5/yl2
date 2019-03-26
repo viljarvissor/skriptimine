@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+#v2ljastab kasutajale arvutatud kolmnurga pindala v22rtuse
+#
+echo "sisestage a kylje väärtus: "
+read a
+echo -n "Sisestage b kylje väärtus: "
+read b
+echo -n "sisestage c kylje väärtus: "
+read c
+
+#arvutamine
+
+p=$(bc <<< "scale=2;($a+$b+$c)/2")
+S=$(bc <<< "scale=3;sqrt($p * ($p - $a) * ($p - $b) * ($p - $c))")
+
+sleep 1
+echo "pindala =" $S "ruutsentimeetrit"
+sleep 1
+#
+#skripti lõpp
