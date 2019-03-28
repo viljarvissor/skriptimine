@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#see skript tuvastab kas sisestatud arv on paarisarv
+#
+read -p "Palun sisestage siia täisarv: " #küsib arvu
+if (( $arv % 2 ==0 ))
+then
+	echo "see on paarisarv"
+else
+	echo "see on paaritu arv"
+fi
+#
+#skripti lõpp
