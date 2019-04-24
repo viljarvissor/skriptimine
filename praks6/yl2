@@ -1,0 +1,30 @@
+#!/bin/bash
+#
+#reisi korraldamis ülesanne
+#
+#küsimused
+echo -n "Sisestage inimeste arv: "
+read inimesed
+echo -n "Sisestage kohtade arv bussis
+read kohad
+#
+#arvutused
+
+bussia=$(($inimesed / $kohad)) #arvutab bussi arvu
+echo "Tuleb tellida"   $bussia "bussi." #ütleb mitu bussi tuleb tellida
+maha=$(($inimesed % $kohad)) #arvutab kui palju jääb maha
+#
+#kui on olemas maha jäänuid, tuleb suurendada busside arv 1 võrra
+if test $maha -gt 0
+then
+	#bussid muutuja vajab yledefineerimist, selle parast ymbersalvestamisl
+	#ei kasuta $ märki, aga arvutamisel juba kasutame
+	bussia=$(($bussid + 1))
+fi
+#tulemuste valjastamine
+#
+echo "Kokku on vaja" $bussia "bussi."
+#
+#lopp
+
+
