@@ -2,8 +2,7 @@
 #
 #Aastaaegade ülesanne
 #
-echo -p "Sisesta palun kuu numbrina: " #küsib kuud
-read kuu
+read -p "Sisesta palun kuu numbrina: " #küsib kuud
 if test $kuu 1 -a $kuu -lt 2
 then
 	echo "On talv"
