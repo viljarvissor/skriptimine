@@ -28,7 +28,7 @@ elif test $kuu == 8
 then
 	echo "On august"
 elif test $kuu == 9
-tehn
+then
 	echo "On september"
 elif test $kuu == 10
 then
