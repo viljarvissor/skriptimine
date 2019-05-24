@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+#tervitus automaatse kella j2rgi
+#
+kell=$(date +%H) #automaatne arvuti kellaaeg
+nimi=$( whoami ) #useri nimi
+
+if [ $kell -ge 6 -a $kell -lt 12 ];
+then
+echo "Tere hommikust, $nimi !"
+elif [ $kell -ge 12 -a $kell -lt 18 ];
+then
+echo "Tere päevast, $nimi !"
+elif [ $kell -ge 18 -a $kell -lt 22 ];
+then
+echo "Tere õhtust, $nimi !"
+elif [ $kell -ge 22 -a $kell -lt 24 ];
+then
+echo "Head ööd, $nimi !"
+elif [ $kell -ge 0 -a $kell -lt 6 ];
+then
+echo "Head ööd, $nimi !"
+else
+echo "Vigane sisend!"
+fi
+#lõpp
