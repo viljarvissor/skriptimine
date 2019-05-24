@@ -1,17 +1,24 @@
-#!bin/bash
+#!/bin/bash
 
-eho -e "Sisesta aja väärtus: \c"
+echo -n "Sisesta hetkene kellaeg täis arvuna: "
 read aeg
-if [ $aeg -ge 6 -a $aeg -lt 12 ]; then
+if [ $aeg -ge 6 -a $aeg -lt 12 ];
+then
 		echo "Tere hommikust!"
-	elif [ $aeg -ge 12 -a $aeg -lt 18 ]; then
+	elif [ $aeg -ge 12 -a $aeg -lt 18 ];
+then
 		echo "Tere päevast!"
-	elif [ $aeg -ge 18 -a $aeg -lt 22 ]; then
+	elif [ $aeg -ge 18 -a $aeg -lt 22 ];
+then
 		echo "Tere õhtust!"
-	elif [ $aeg -ge 22 -a $aeg -lt 24 ] || [ $aeg -ge 0 -a $aeg -lt 6 ]; then
-		echo -n "Head ööd!"
+	elif [ $aeg -ge 22 -a $aeg -lt 24 ];
+then
+		echo "Head ööd!"
+	elif [ $aeg -ge 0 -a $aeg -lt 6 ];
+then
+		echo "Head ööd!"
 	else
-		echo "Vale sisend"
+		echo "Vigane sisend"
 fi
 #skripti lõpp
 
